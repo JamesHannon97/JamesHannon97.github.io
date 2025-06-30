@@ -26,6 +26,7 @@
       display: flex;
       justify-content: center;
       background: #444;
+      flex-wrap: wrap;
     }
     nav a {
       color: #fff;
@@ -33,11 +34,13 @@
       display: block;
       text-decoration: none;
       transition: background 0.3s;
+      cursor: pointer;
     }
     nav a:hover {
       background: #555;
     }
-    section {
+    .section {
+      display: none;
       padding: 40px;
       max-width: 800px;
       margin: auto;
@@ -45,6 +48,9 @@
       margin-top: 20px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .active {
+      display: block;
     }
     h2 {
       margin-bottom: 20px;
@@ -67,22 +73,22 @@
   </header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#personal">Personal</a>
-    <a href="#education">Education</a>
-    <a href="#publications">Publications</a>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('personal')">Personal</a>
+    <a onclick="showSection('education')">Education</a>
+    <a onclick="showSection('publications')">Publications</a>
     <a href="cv.pdf" target="_blank">CV</a>
-    <a href="#contact">Contact</a>
+    <a onclick="showSection('contact')">Contact</a>
   </nav>
 
-  <section id="about">
+  <section id="about" class="section active">
     <h2>About</h2>
     <p>
       I am a PhD student in statistics with a focus on applied Bayesian modelling for societal and behavioural data. My current work includes predictive modelling using telematics data, wearables data, satellite imagery, and self-reported measures.
     </p>
   </section>
 
-  <section id="personal">
+  <section id="personal" class="section">
     <h2>Personal</h2>
     <p>In my free time, I enjoy films, reading, listening to music, and watching football. You can find me here:</p>
     <ul>
@@ -92,16 +98,16 @@
     </ul>
   </section>
 
-  <section id="education">
+  <section id="education" class="section">
     <h2>Education</h2>
     <ul>
       <li><strong>PhD in Statistics</strong>, University College Dublin, Dublin, Ireland (2021–Present)</li>
-      <li><strong>MSc in Statistics (Data Science)</strong>, Imperial College London, London, UK (2020-2021)</li>
+      <li><strong>MSc in Statistics (Data Science)</strong>, Imperial College London, London, UK (2020–2021)</li>
       <li><strong>BSc in Financial Mathematics</strong>, University College Dublin, Dublin, Ireland (2016–2020)</li>
     </ul>
   </section>
 
-  <section id="publications">
+  <section id="publications" class="section">
     <h2>Publications</h2>
     <ul>
       <li>
@@ -113,7 +119,7 @@
     </ul>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="section">
     <h2>Contact</h2>
     <p>Email: james.hannon1@ucdconnect.ie</p>
     <p>GitHub: <a href="https://github.com/jameshannon97" target="_blank">github.com/jameshannon97</a></p>
@@ -123,6 +129,15 @@
   <footer>
     <p>&copy; 2025 James Hannon. All rights reserved.</p>
   </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
 
