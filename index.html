@@ -1,34 +1,111 @@
 <!DOCTYPE html>
-<html>
- <head>
-   <title>James Hannon Portfolio</title>
-   <link rel="stylesheet" href="css/styles.css">
- </head>
- <body>
-   <nav>
-     <ul>
-       <li><a href="/">Home</a></li>
-       <li><a href="/about">About</a></li>
-       <li><a href="/resume">Resume</a></li>
-       <li><a href="/blog">Blog</a></li>
-     </ul>
-   </nav>
-   <div class="container">
-     <div class="blurb">
-       <h1>Hi, I am James Hannon!</h1>
-       <p>This is my first page for my personal website!</p>
-     </div>
-   </div>
-   <footer>
-     <ul>
-       <li><a href="mailto:YOUREMAIL">YOUREMAIL</a></li>
-     </ul>
-     <form action="https://www.paypal.com/donate" method="post" target="_top">
-       <input type="hidden" name="hosted_button_id" value="R7DU6UT38VDX2" />
-       <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-       <img alt="" border="0" src="https://www.paypal.com/en_IE/i/scr/pixel.gif" width="1" height="1" />
-     </form>
-   </footer>
- </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My GitHub Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #444;
+    }
+    nav a {
+      color: #fff;
+      padding: 14px 20px;
+      display: block;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #555;
+    }
+    section {
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #222;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>James Hannon</h1>
+    <p>PhD Student | Data Science | Statistics</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I am a PhD student in statistics with a focus on applied Bayesian modelling for societal and behavioural data. My current work includes predictive modelling using sensor data, satellite imagery, and self-reported measures.
+    </p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>PhD in Statistics</strong>, University College Dublin (2022–Present)</li>
+      <li><strong>MSc in Data Science</strong>, University of [Your University] (Year)</li>
+      <li><strong>BSc in Mathematics</strong>, [Your Undergraduate University] (Year)</li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <ul>
+      <li>Hannon, J. et al. (2025). Predicting Vehicle Crime Using Street-Level Imagery. <em>Journal of Urban Analytics</em>.</li>
+      <li>Hannon, J. et al. (2024). Modelling Fatigue Through Smartwatch Biometrics. <em>Health Data Science</em>.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: james.hannon@example.com</p>
+    <p>GitHub: <a href="https://github.com/jameshannon" target="_blank">github.com/jameshannon</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/jameshannon" target="_blank">linkedin.com/in/jameshannon</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 James Hannon. All rights reserved.</p>
+  </footer>
+</body>
 </html>
 
