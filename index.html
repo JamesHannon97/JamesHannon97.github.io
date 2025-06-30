@@ -39,8 +39,7 @@
     nav a:hover {
       background: #555;
     }
-    .section {
-      display: none;
+    section {
       padding: 40px;
       max-width: 800px;
       margin: auto;
@@ -48,9 +47,6 @@
       margin-top: 20px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .active {
-      display: block;
     }
     h2 {
       margin-bottom: 20px;
@@ -73,71 +69,45 @@
   </header>
 
   <nav>
-    <a onclick="showSection('about')">About</a>
-    <a onclick="showSection('personal')">Personal</a>
-    <a onclick="showSection('education')">Education</a>
-    <a onclick="showSection('publications')">Publications</a>
+    <a onclick="clearContent()">About</a>
+    <a onclick="loadPage('personal.html')">Personal</a>
+    <a onclick="loadPage('education.html')">Education</a>
+    <a onclick="loadPage('publications.html')">Publications</a>
     <a href="cv.pdf" target="_blank">CV</a>
-    <a onclick="showSection('contact')">Contact</a>
+    <a onclick="loadPage('contact.html')">Contact</a>
   </nav>
 
-  <section id="about" class="section active">
+  <section id="about">
     <h2>About</h2>
     <p>
       I am a PhD student in statistics with a focus on applied Bayesian modelling for societal and behavioural data. My current work includes predictive modelling using telematics data, wearables data, satellite imagery, and self-reported measures.
     </p>
   </section>
 
-  <section id="personal" class="section">
-    <h2>Personal</h2>
-    <p>In my free time, I enjoy films, reading, listening to music, and watching football. You can find me here:</p>
-    <ul>
-      <li>Letterboxd: <a href="https://letterboxd.com/jamesh97/" target="_blank">letterboxd.com/jamesh97</a></li>
-      <li>Goodreads: <a href="https://www.goodreads.com/jameshannon97" target="_blank">goodreads.com/jameshannon97</a></li>
-      <li>Spotify: <a href="https://open.spotify.com/user/jameshannon97" target="_blank">open.spotify.com/user/jameshannon97</a></li>
-    </ul>
-  </section>
-
-  <section id="education" class="section">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>PhD in Statistics</strong>, University College Dublin, Dublin, Ireland (2021–Present)</li>
-      <li><strong>MSc in Statistics (Data Science)</strong>, Imperial College London, London, UK (2020–2021)</li>
-      <li><strong>BSc in Financial Mathematics</strong>, University College Dublin, Dublin, Ireland (2016–2020)</li>
-    </ul>
-  </section>
-
-  <section id="publications" class="section">
-    <h2>Publications</h2>
-    <ul>
-      <li>
-        <a href="https://doi.org/10.1017/S135732172500008X" target="_blank">
-          Hannon, J., and O'Hagan, A. (2025). Statistical models for improved insurance risk assessment using telematics.
-        </a>
-        <em>British Actuarial Journal</em>.
-      </li>
-    </ul>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: james.hannon1@ucdconnect.ie</p>
-    <p>GitHub: <a href="https://github.com/jameshannon97" target="_blank">github.com/jameshannon97</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/hannon-james/" target="_blank">linkedin.com/in/hannon-james</a></p>
-  </section>
+  <section id="content"></section>
 
   <footer>
     <p>&copy; 2025 James Hannon. All rights reserved.</p>
   </footer>
 
   <script>
-    function showSection(id) {
-      document.querySelectorAll('.section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(id).classList.add('active');
+    function loadPage(page) {
+      fetch(page)
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('about').style.display = 'none';
+          document.getElementById('content').innerHTML = html;
+        })
+        .catch(err => {
+          document.getElementById('content').innerHTML = '<p>Sorry, page failed to load.</p>';
+          console.error(err);
+        });
+    }
+
+    function clearContent() {
+      document.getElementById('content').innerHTML = '';
+      document.getElementById('about').style.display = 'block';
     }
   </script>
 </body>
 </html>
-
