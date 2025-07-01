@@ -1,0 +1,47 @@
+<section id="experience">
+    <h2>Experience</h2>
+  
+    <div class="experience-section">
+      <h3>Internships</h3>
+      <ul>
+        <li>
+          <strong>Data Scientist</strong> – Central Bank of Ireland, Summer 2022<br />
+          Led a research project titled “Unwrapping Bond Secrets with AI”, analysing bond market liquidity in response to Covid-19 shocks. Investigated bid-ask spreads over a five-year period using large-scale bond data, and developed a forecasting pipeline combining DBA-K-means clustering, LSTM, and ARIMA models. Built an anomaly detection system to flag bonds with unusual liquidity behaviour, contributing to regulatory oversight. Collaborated closely with economists and data scientists to support the Bank’s financial stability and consumer protection goals through innovative analytics.
+        </li>
+        <li>
+          <strong>Technology Consultant</strong> – PwC, Summer 2019<br />
+          Consulted a major Irish commercial bank by analysing data on non-performing loans, identifying customers most at risk of default, and presenting findings to senior bank officials; also collaborated with a team of interns on an innovation challenge to improve the future of work for PwC staff.
+        </li>
+        <li>
+            <strong>eCommerce Channel Development</strong> – Fiserv (formerly First Data), Summer 2018<br />
+            Supported eCommerce growth initiatives across First Data’s international regions (EMEA, APAC, and LATAM), including the commercialisation of products and solutions. Responsibilities included collaborating with regional eCommerce leads to develop go-to-market strategies, sourcing and developing eCommerce partnerships, assessing sales team capabilities and training needs, and working with key sellers and bid managers to prepare RFP responses. 
+          </li>
+      </ul>
+    </div>
+  
+    <div class="experience-section">
+      <h3>Work</h3>
+      <ul>
+        <li>
+          <strong>Sports Trader</strong> – Paddy Power Betfair, 2017–2020<br />
+          Worked as a Euro/US Sports Trader, responsible for compiling odds for upcoming events, monitoring bets and adjusting prices, and managing client relationships. Tasks included maintaining and adjusting trading models based on market conditions, accurately entering in-play match data and settlement criteria, and ensuring consistent pre-match pricing. Also analysed and recorded trading performance to support future strategy and performance management.
+        </li>
+      </ul>
+    </div>
+  
+    <div class="experience-section">
+        <h3>Other</h3>
+        <ul>
+          <li>
+            Competed in the <strong>2023 Spring Citadel Datathon</strong>
+            <a href="pdfs/world_citadel.pdf" target="_blank">View Certificate</a>
+            <a href="pdfs/Team_10_report.pdf" target="_blank">Exploring Racial, Ethnic and Gender Disparities in Sentencing Outcomes in Chicago’s Judicial System</a>
+          </li>
+          <li>
+            Won the <strong>2023 Spring Citadel European Regional Datathon</strong>
+            <a href="pdfs/europe_citadel.pdf" target="_blank">View Certificate</a>
+            <a href="pdfs/Team_3_report.pdf" target="_blank">Protecting Philadelphians Via Data Vigilantism</a>
+          </li>
+        </ul>
+      </div>
+  </section>
